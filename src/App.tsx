@@ -87,16 +87,16 @@ const App: React.FC = () => {
 
   const filteredData = useMemo(() => {
     let filtered = filterCategory === "All" ? [...inventory] : inventory.filter((Item: InventoryItem) => Item.category === filterCategory)
+    if (searchValue) {
+      filtered = filtered.filter((item: InventoryItem) => item.name.includes(searchValue) || item.category.includes(searchValue))
+    }
     if (sortAsc) {
       filtered.sort((a, b) => a.quantity - b.quantity)
     }
     else if (sortDsc) {
       filtered.sort((a, b) => b.quantity - a.quantity)
     }
-    else if (searchValue && searchValue.length > 0) {
 
-      filtered = inventory.filter((item: InventoryItem) => item.name.includes(searchValue) || item.category.includes(searchValue))
-    }
     return filtered
   }, [inventory, filterCategory, sortAsc, sortDsc, searchValue])
 
