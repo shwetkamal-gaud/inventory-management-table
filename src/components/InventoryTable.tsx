@@ -74,7 +74,7 @@ const InventoryTable: React.FC<InventoryTableProps> = ({ inventory, onEdit, onDe
                         Cancel
                     </button>
                     <button type="button" onClick={() => { onDelete(id); onClose() }} className="bg-blue-500 text-white px-4 py-2 rounded">
-                        Save
+                        Delete
                     </button>
                 </div>
             </Modal>
