@@ -7,9 +7,9 @@ The "Add" button at the top opens a modal with a form to input item details like
 - Quantity
 ## 2. Edit Existing Items
 Users can edit existing items in the inventory.
-The "Edit" button opens the modal pre-filled with the item's details.
+The Edit icon opens the modal pre-filled with the item's details.
 ## 3. Delete Items
-Users can delete an item from the inventory by clicking the "Delete" button.
+Users can delete an item from the inventory by clicking the Delete icon.
 ## 4. Filter by Category
 Users can filter items by their category using a dropdown.
 The "All Categories" option resets the view to show all items.
