@@ -16,8 +16,21 @@
 
 ## Clone the Repository:
 ```bash
-git clone https://github.com/your-username/inventory-management-app.git
+git clone https://github.com/shwetkamal-gaud/inventory-management-table.git
 ```
+## Navigate to the Project Directory:
+```bash
+cd inventory-management-table
+```
+## Install Dependencies:
+```bash
+npm install or npm i
+```
+## Start the Development Server:
+```bash
+npm run dev
+```
+
 
 # React + TypeScript + Vite
 
