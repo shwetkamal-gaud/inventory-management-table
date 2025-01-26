@@ -12,7 +12,12 @@
 - TypeScript: For type safety and better development experience.
 - TailwindCSS: For styling the components with utility-first classes.
 
+# Installation
 
+## Clone the Repository:
+```bash
+git clone https://github.com/your-username/inventory-management-app.git
+```
 
 # React + TypeScript + Vite
 
