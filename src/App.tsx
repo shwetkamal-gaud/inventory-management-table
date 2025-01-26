@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import InventoryTable from "./components/InventoryTable";
 import InventoryForm from "./components/InventoryForm";
 import Modal from "./components/Modal";

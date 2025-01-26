@@ -1,5 +1,3 @@
-import React from "react";
-
 interface SelectProps {
     options: string[]
     selectedValue: string
