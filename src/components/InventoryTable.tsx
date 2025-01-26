@@ -44,7 +44,7 @@ const InventoryTable: React.FC<InventoryTableProps> = ({ inventory, onEdit, onDe
                             <td className="border border-gray-300 px-4 py-2 text-center">{item.category}</td>
                             <td className="border border-gray-300 px-4 py-2 text-center">{item.quantity}</td>
                             <td className="border border-gray-300 px-4 py-2 text-center">
-                                <div className="flex gap-10">
+                                <div className="flex items-center justify-center gap-10">
                                     <button
                                         onClick={() => onEdit(item)}
                                         className="rounded"
