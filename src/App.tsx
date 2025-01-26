@@ -39,6 +39,7 @@ const App: React.FC = () => {
   const [filterCategory, setFilterCategory] = useState<string>("All");
   const [sortAsc, setSortAsc] = useState<boolean>(false);
   const [sortDsc, setSortDsc] = useState<boolean>(false)
+  const [searchValue, setSearchValue] = useState<string>('')
 
   const handleSave = (item: Omit<InventoryItem, "id">) => {
     if (currentItem) {
@@ -52,11 +53,7 @@ const App: React.FC = () => {
     }
     closeModal();
   };
-  useEffect(() => {
-    if (inventory.length > 0) {
-      localStorage.setItem("inventoryItems", JSON.stringify(inventory));
-    }
-  }, [inventory]);
+
 
   const handleDelete = (id: number) => {
     setInventory((prev) => prev.filter((item) => item.id !== id));
@@ -96,11 +93,15 @@ const App: React.FC = () => {
     else if (sortDsc) {
       filtered.sort((a, b) => b.quantity - a.quantity)
     }
+    else if (searchValue && searchValue.length > 0) {
+
+      filtered = inventory.filter((item: InventoryItem) => item.name.includes(searchValue) || item.category.includes(searchValue))
+    }
     return filtered
-  }, [inventory, filterCategory, sortAsc, sortDsc])
+  }, [inventory, filterCategory, sortAsc, sortDsc, searchValue])
 
   return (
-    <div className="flex w-full flex-col overflow-hidden h-[100vh] items-center p-4">
+    <div className="flex w-full flex-col overflow-hidden items-center p-4">
       <div className="flex w-full gap-3 justify-between items-center mb-4">
         <div className="flex  gap-3">
           <SimpleSelect options={[
@@ -126,12 +127,21 @@ const App: React.FC = () => {
         </button>
 
       </div>
-      <div className="flex-1 overflow-auto w-[100%]">
-        <InventoryTable
-          inventory={filteredData}
-          onEdit={handleEditClick}
-          onDelete={handleDelete}
+      <div className="flex flex-col w-full gap-5 h-[88vh] ">
+        <input type="text"
+          placeholder="Search..."
+          value={searchValue}
+          title="Search by Name or ny Category"
+          onChange={(e) => setSearchValue(e.target.value)}
+          className="border self-start   p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300 dark:focus:ring-blue-500"
         />
+        <div className="flex-1 overflow-auto w-[100%]  ">
+          <InventoryTable
+            inventory={filteredData}
+            onEdit={handleEditClick}
+            onDelete={handleDelete}
+          />
+        </div>
       </div>
       <Modal
         isOpen={isModalOpen}
