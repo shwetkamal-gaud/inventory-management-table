@@ -1,24 +1,10 @@
 # Features
 ## 1. Add New Items
-Users can add new items to the inventory.
-The "Add" button at the top opens a modal with a form to input item details like:
-- Name
-- Category
-- Quantity
 ## 2. Edit Existing Items
-Users can edit existing items in the inventory.
-The Edit icon opens the modal pre-filled with the item's details.
 ## 3. Delete Items
-Users can delete an item from the inventory by clicking the Delete icon.
 ## 4. Filter by Category
-Users can filter items by their category using a dropdown.
-The "All Categories" option resets the view to show all items.
 ## 5. Sort by Quantity
-Users can toggle between ascending and descending order of quantity with a sort button.
-## 6. Highlight Low Stock
-Items with a quantity below 10 are highlighted with a red background for better visibility.
 ## 7. Search by Name or Category 
-Users can Search Items by their name and category. 
 
 # Tech Stack
 ## Frontend:
