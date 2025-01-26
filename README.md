@@ -17,6 +17,8 @@ The "All Categories" option resets the view to show all items.
 Users can toggle between ascending and descending order of quantity with a sort button.
 ## 6. Highlight Low Stock
 Items with a quantity below 10 are highlighted with a red background for better visibility.
+## 7. Search by Name or Category 
+Users can Search Items by their name and category. 
 
 # Tech Stack
 ## Frontend:
