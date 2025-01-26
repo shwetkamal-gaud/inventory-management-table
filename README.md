@@ -24,7 +24,7 @@ cd inventory-management-table
 ```
 ## Install Dependencies:
 ```bash
-npm install or npm i
+npm install
 ```
 ## Start the Development Server:
 ```bash
