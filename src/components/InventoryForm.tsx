@@ -24,7 +24,7 @@ const InventoryForm: React.FC<InventoryFormProps> = ({ onSave, initialData, onCa
                 placeholder="Name"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300 dark:focus:ring-blue-500"
+                className="border border-gray-100 shadow p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300 dark:focus:ring-blue-500"
                 required
             />
             <SimpleSelect options={[
@@ -42,7 +42,7 @@ const InventoryForm: React.FC<InventoryFormProps> = ({ onSave, initialData, onCa
                 onChange={(e) =>
                     setFormData({ ...formData, quantity: parseInt(e.target.value, 10) })
                 }
-                className="border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300 dark:focus:ring-blue-500"
+                className="border border-gray-300 shadow p-2 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300 dark:focus:ring-blue-500"
                 min="1"
                 required
             />
