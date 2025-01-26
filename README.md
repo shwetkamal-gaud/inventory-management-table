@@ -12,6 +12,24 @@
 - TypeScript: For type safety and better development experience.
 - TailwindCSS: For styling the components with utility-first classes.
 
+# Installation
+
+## Clone the Repository:
+```bash
+git clone https://github.com/shwetkamal-gaud/inventory-management-table.git
+```
+## Navigate to the Project Directory:
+```bash
+cd inventory-management-table
+```
+## Install Dependencies:
+```bash
+npm install
+```
+## Start the Development Server:
+```bash
+npm run dev
+```
 
 
 # React + TypeScript + Vite
